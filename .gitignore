@@ -13,8 +13,8 @@ logs
 results
 tmp
 
-# Optional npm cache directory
-.npm
+# Optional npm cache directory test
+.npm 
 
 #Build
 .nyc_output/*
