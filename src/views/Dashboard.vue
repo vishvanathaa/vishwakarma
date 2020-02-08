@@ -1,0 +1,88 @@
+<template>
+  <div class="team">
+    
+
+    <v-container class="my-2">
+
+      <v-layout row wrap>
+        <v-flex xs12 sm6 md4 lg3 v-for="star in stars" :key="star.name">
+          
+          <v-card
+    max-width="344"
+    class="mx-auto text-xs-center ma-3 mr-3" 
+  >
+    <v-list-item>
+      <v-list-item-avatar color="grey lighten-2" v-html="star.avatar" dark></v-list-item-avatar>
+      <v-list-item-content>
+        <v-list-item-title class="headline">{{star.name}}</v-list-item-title>
+        <v-list-item-subtitle>(Jan 1 - Feb 20))</v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
+
+   
+
+    <v-card-text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga mollitia cupiditate eaque asperiores. Minus optio assumenda sequi maiores, voluptatem tempore incidunt rerum in minima id eligendi officiis, enim perferendis!
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn
+        text
+        color="deep-purple accent-4"
+      >
+        Read
+      </v-btn>
+      <v-btn
+        text
+        color="deep-purple accent-4"
+      >
+        Bookmark
+      </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-share-variant</v-icon>
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+          
+    
+        </v-flex>
+      </v-layout>
+
+    </v-container>
+    
+  </div>
+</template>
+
+<script>
+
+
+export default {
+  name: 'Dashboard',
+  components: {
+    
+  },
+   data() {
+    return {
+      stars: [
+        { name: 'Aries', role: 'Web developer', avatar: '&#9800;' },
+        { name: 'Taurus', role: 'Graphic designer', avatar: '&#9801;' },
+        { name: 'Gemini', role: 'Web developer', avatar: '&#9802;' },
+        { name: 'Cancer', role: 'Social media maverick', avatar: '&#9803;' },
+        { name: 'Leo', role: 'Sales guru', avatar: '&#9804;'},
+        { name: 'Virgo', role: 'Web developer', avatar: '&#9805;' },
+        { name: 'Libra', role: 'Graphic designer', avatar: '&#9806;' },
+        { name: 'Scorpio', role: 'Web developer', avatar: '&#9807;' },
+        { name: 'Sagattarius', role: 'Social media maverick', avatar: '&#9808;' },
+        { name: 'Capricorn', role: 'Sales guru', avatar: '&#9809;'},
+        { name: 'Aquarius', role: 'Social media maverick', avatar: '&#9810;' },
+        { name: 'Pisces', role: 'Sales guru', avatar: '&#9811;'}
+      ]
+    }
+  }
+
+}
+</script>
