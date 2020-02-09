@@ -15,14 +15,14 @@
       <v-list-item-avatar color="grey lighten-2" v-html="star.avatar" dark></v-list-item-avatar>
       <v-list-item-content>
         <v-list-item-title class="headline">{{star.name}}</v-list-item-title>
-        <v-list-item-subtitle>(Jan 1 - Feb 20))</v-list-item-subtitle>
+        <v-list-item-subtitle>{{star.role}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
    
 
     <v-card-text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga mollitia cupiditate eaque asperiores. Minus optio assumenda sequi maiores, voluptatem tempore incidunt rerum in minima id eligendi officiis, enim perferendis!
+      {{star.content.substring(0,280)+"...."}}
     </v-card-text>
 
     <v-card-actions>
@@ -59,7 +59,7 @@
 
 <script>
 
-
+import db from '@/fb'
 export default {
   name: 'Dashboard',
   components: {
@@ -67,21 +67,37 @@ export default {
   },
    data() {
     return {
-      stars: [
-        { name: 'Aries', role: 'Web developer', avatar: '&#9800;' },
-        { name: 'Taurus', role: 'Graphic designer', avatar: '&#9801;' },
-        { name: 'Gemini', role: 'Web developer', avatar: '&#9802;' },
-        { name: 'Cancer', role: 'Social media maverick', avatar: '&#9803;' },
-        { name: 'Leo', role: 'Sales guru', avatar: '&#9804;'},
-        { name: 'Virgo', role: 'Web developer', avatar: '&#9805;' },
-        { name: 'Libra', role: 'Graphic designer', avatar: '&#9806;' },
-        { name: 'Scorpio', role: 'Web developer', avatar: '&#9807;' },
-        { name: 'Sagattarius', role: 'Social media maverick', avatar: '&#9808;' },
-        { name: 'Capricorn', role: 'Sales guru', avatar: '&#9809;'},
-        { name: 'Aquarius', role: 'Social media maverick', avatar: '&#9810;' },
-        { name: 'Pisces', role: 'Sales guru', avatar: '&#9811;'}
-      ]
+      stars : []
+      // stars: [
+      //   { name: 'Aries', role: 'Web developer', avatar: '&#9800;' },
+      //   { name: 'Taurus', role: 'Graphic designer', avatar: '&#9801;' },
+      //   { name: 'Gemini', role: 'Web developer', avatar: '&#9802;' },
+      //   { name: 'Cancer', role: 'Social media maverick', avatar: '&#9803;' },
+      //   { name: 'Leo', role: 'Sales guru', avatar: '&#9804;'},
+      //   { name: 'Virgo', role: 'Web developer', avatar: '&#9805;' },
+      //   { name: 'Libra', role: 'Graphic designer', avatar: '&#9806;' },
+      //   { name: 'Scorpio', role: 'Web developer', avatar: '&#9807;' },
+      //   { name: 'Sagattarius', role: 'Social media maverick', avatar: '&#9808;' },
+      //   { name: 'Capricorn', role: 'Sales guru', avatar: '&#9809;'},
+      //   { name: 'Aquarius', role: 'Social media maverick', avatar: '&#9810;' },
+      //   { name: 'Pisces', role: 'Sales guru', avatar: '&#9811;'}
+      // ]
     }
+  },
+  created()
+  {
+    db.collection('stars').onSnapshot(res =>{
+       const changes = res.docChanges()
+       changes.forEach(change => {
+         if(change.type === 'added') {
+          this.stars.push({
+            ...change.doc.data(),
+            id:change.doc.id
+          })
+         }
+       });
+    }
+    );
   }
 
 }
