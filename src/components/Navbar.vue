@@ -4,7 +4,7 @@
     <v-app-bar
       color="primary accent-4"
       dense
-      dark
+      dark  app
     >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -37,11 +37,11 @@
             :key="menu.name"
             @click="() => {}"
           >
-            <v-list-item-icon style="width:20px" v-html="menu.avatar">
+            <v-list-item-icon  v-html="menu.avatar" class="d-flex pr-0">
             
-          </v-list-item-icon>
+          </v-list-item-icon >
 
-            <v-list-item-title> {{ menu.name }}</v-list-item-title>
+            <v-list-item-title > {{ menu.name }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -54,11 +54,12 @@
         <v-list-item-content>
           <v-list-item-title class="title">
             ASTROLOGY
+            
           </v-list-item-title>
-          <v-list-item-subtitle>
-            <v-btn class="mx-1"  color="orange">
-            <v-icon dark>mdi-plus</v-icon>Add Prediction
-            </v-btn>
+          
+          <v-list-item-subtitle class="d-flex pr-1">
+           <popup/>
+            
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -87,8 +88,10 @@
   </div>
 </template>
 <script>
+import Popup from './Popup'
 export default {
-     data() {
+    components:{Popup},
+    data() {
     return {
       drawer: false,
       links: [
@@ -118,7 +121,7 @@ export default {
         { name: 'Aquarius', role: 'Social media maverick', avatar: '&#9810;' },
         { name: 'Pisces', role: 'Sales guru', avatar: '&#9811;'}
       ],
-      snackbar: false
+      snackbar: true
     }
   }
 }
