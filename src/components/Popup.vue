@@ -23,7 +23,28 @@
         </v-card-title>
 
         <v-card-text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <v-row>
+              <v-col cols="12">
+                <v-combobox
+          v-model="select"
+          :items="items"
+          
+          prepend-icon="mdi-star"
+          chips
+        ></v-combobox>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="12" >
+                <v-textarea
+                
+                label="Enter your prediction here (use <br> for next line)"
+                rows="4"
+                prepend-icon="mdi-book"
+                v-model="prediction"
+                ></v-textarea>
+            </v-col>
+          </v-row>
         </v-card-text>
 
         <v-divider></v-divider>
@@ -43,6 +64,22 @@
     data () {
       return {
         dialog: false,
+        select: ['Aries'],
+        items: [
+          'Aries',
+          'Taurus',
+          'Gemini',
+          'Cancer',
+          'Leo',
+          'Virgo',
+          'Libra',
+          'Scorpio',
+          'Sagattarius',
+          'Capricorn',
+          'Aquarius',
+          'Pisces',
+        ],
+        prediction:''
       }
     },
   }
