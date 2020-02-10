@@ -9,13 +9,19 @@ const routes = [
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-    props: true
+    props: true,
+    meta: {
+      reload: true,
+    }
   },
   {
-    path: '/Dashboard',
-    name: 'Dashboard',
+    path: '/Dashboard/:id',
+    name: 'DashboardRefresh',
     component: Dashboard,
-    props: true
+    props: true,
+    meta: {
+      reload: true,
+    }
   },
   {
     path: '/about',

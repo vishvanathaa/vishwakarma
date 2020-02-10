@@ -61,8 +61,10 @@ export default {
   },
   watch: {
     // call again the method if the route changes
-    '$route': 'fetchdata'
+    //'$route': 'fetchdata'
+    '$route.path': 'getData'
   },
+  
   methods : {
     fetchdata(){
       db.collection('stars').onSnapshot(res =>{

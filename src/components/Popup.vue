@@ -82,7 +82,7 @@
         content:'',
         inputRules: [
           v => !!v || 'This field is required',
-          v => v.length >= 300 || 'Minimum length is 300 characters'
+          v => v.length >= 270 || 'Minimum length is 300 characters'
         ],
        loading: false
       }

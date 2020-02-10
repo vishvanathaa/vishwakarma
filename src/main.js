@@ -8,5 +8,9 @@ Vue.config.productionTip = false
 new Vue({
   router,
   vuetify,
+  watch:{
+    '$route' (to) {
+       if(to.currentRoute.meta.reload==true){window.location.reload()}
+   }},
   render: h => h(App)
 }).$mount('#app')

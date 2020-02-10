@@ -3,7 +3,7 @@
   <div>
     <v-snackbar v-model="snackbar" :timeout="4000" top color="success">
       <span>Awesome! You added a new prediction.</span>
-      <v-btn color="white" text @click="snackbar = false" router :to="'/Dashboard'"  >Close</v-btn>
+      <v-btn color="white" text @click="snackbar = false" router :to="{ path: '/Dashboard', name: 'DashboardRefresh', params: { id: 123 }}"  >Close</v-btn>
     </v-snackbar>
     <v-app-bar
       color="primary accent-4"
@@ -18,7 +18,7 @@
       <v-spacer></v-spacer>
 
       <!-- <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+        <v-icon>mdi-heart</v-icon>np
       </v-btn> -->
 
       <v-btn icon>
