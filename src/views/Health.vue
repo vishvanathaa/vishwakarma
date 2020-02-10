@@ -5,14 +5,14 @@
              <v-card
     :loading="loading"
     class="mx-auto my-12"
-    max-width="374"
+    max-width="600"
   >
     <v-img
       height="250"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title>Choose food based on your birth sign</v-card-title>
 
     <v-card-text>
       <v-row
@@ -32,15 +32,15 @@
       </v-row>
 
       <div class="my-4 subtitle-1 black--text">
-        $ • Italian, Cafe
+         $ • Indian, Cafe
       </div>
 
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+      <div>Early diet in India mainly consisted of legumes, vegetables, fruits, grains, dairy products, and honey. Staple foods eaten today include a variety of lentils (dal), whole-wheat flour (aṭṭa), rice, and pearl millet (bājra), which has been cultivated in the Indian subcontinent since 6200 BCE.</div>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
-    <v-card-title>Tonight's availability</v-card-title>
+    <v-card-title>Right time for food</v-card-title>
 
     <v-card-text>
       <v-chip-group
@@ -70,3 +70,20 @@
   </v-card>
       </div>
       </template>
+     
+  <script>
+
+export default {
+    data: () => ({
+      loading: false,
+      selection: 1,
+    }),
+    methods: {
+      reserve () {
+        this.loading = true
+
+        setTimeout(() => (this.loading = false), 2000)
+      },
+    },
+}
+</script>

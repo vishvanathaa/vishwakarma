@@ -96,15 +96,16 @@ export default {
       drawer: false,
       links: [
         { icon: 'mdi-lifebuoy', text: 'Dashboard', route: '/' },
-        { icon: 'mdi-dropbox', text: 'Land', route: '/Land' },
+         { icon: 'mdi-ambulance', text: 'Health', route: '/Health' },
         { icon: 'mdi-steam-box', text: 'Education', route: '/Education' },
         { icon: 'mdi-desktop-classic', text: 'Career', route: '/Career' },
         { icon: 'mdi-xbox', text: 'Foreign Travel', route: '/ForeignTravel' },
         { icon: 'mdi-playstation', text: 'Visa', route: '/Visa' },
         { icon: 'mdi-nintendo-switch', text: 'Marriage', route: '/Marriage' },
         { icon: 'mdi-heart', text: 'Love and Relationship', route: '/Relationship' },
-         { icon: 'mdi-ambulance', text: 'Health', route: '/Health' },
+       
         { icon: 'mdi-currency-inr', text: 'Money', route: '/Money' },
+        { icon: 'mdi-dropbox', text: 'Land', route: '/Land' },
          { icon: 'mdi-chart-multiple', text: 'Research and analysis', route: '/team8' },
       ],
       menus: [
