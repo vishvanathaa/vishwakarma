@@ -4,7 +4,7 @@
 <div>
              <v-card
     :loading="loading"
-    class="mx-auto my-12"
+    class="mx-auto my-2"
     max-width="600"
   >
     <v-img
