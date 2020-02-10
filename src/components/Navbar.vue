@@ -1,9 +1,9 @@
 
 <template>
   <div>
-    <v-snackbar v-model="snackbar" :timeout="4000" top color="success">
+    <v-snackbar v-model="snackbar" :timeout="5000" top color="success">
       <span>Awesome! You added a new prediction.</span>
-      <v-btn color="white" text @click="snackbar = false" router :to="{ path: '/Dashboard', name: 'DashboardRefresh', params: { id: 123 }}"  >Close</v-btn>
+      <v-btn color="white" text @click="snackbar = false" router :to="{ path: '/ConfirmationAdd', name: 'ConfirmationAdd'}"  >Close</v-btn>
     </v-snackbar>
     <v-app-bar
       color="primary accent-4"
@@ -96,15 +96,15 @@ export default {
       drawer: false,
       links: [
         { icon: 'mdi-lifebuoy', text: 'Dashboard', route: '/' },
-        { icon: 'mdi-dropbox', text: 'Land', route: '/projects' },
-        { icon: 'mdi-steam-box', text: 'Education', route: '/team' },
-        { icon: 'mdi-desktop-classic', text: 'Career', route: '/team1' },
-        { icon: 'mdi-xbox', text: 'Foreign Travel', route: '/team2' },
-        { icon: 'mdi-playstation', text: 'Visa', route: '/team3' },
-        { icon: 'mdi-nintendo-switch', text: 'Marriage', route: '/team4' },
-        { icon: 'mdi-heart', text: 'Love and Relationship', route: '/team5' },
-         { icon: 'mdi-ambulance', text: 'Health', route: '/team6' },
-        { icon: 'mdi-currency-inr', text: 'Money', route: '/team7' },
+        { icon: 'mdi-dropbox', text: 'Land', route: '/Land' },
+        { icon: 'mdi-steam-box', text: 'Education', route: '/Education' },
+        { icon: 'mdi-desktop-classic', text: 'Career', route: '/Career' },
+        { icon: 'mdi-xbox', text: 'Foreign Travel', route: '/ForeignTravel' },
+        { icon: 'mdi-playstation', text: 'Visa', route: '/Visa' },
+        { icon: 'mdi-nintendo-switch', text: 'Marriage', route: '/Marriage' },
+        { icon: 'mdi-heart', text: 'Love and Relationship', route: '/Relationship' },
+         { icon: 'mdi-ambulance', text: 'Health', route: '/Health' },
+        { icon: 'mdi-currency-inr', text: 'Money', route: '/Money' },
          { icon: 'mdi-chart-multiple', text: 'Research and analysis', route: '/team8' },
       ],
       menus: [
