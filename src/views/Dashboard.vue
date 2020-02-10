@@ -2,14 +2,14 @@
   <div class="team">
     <v-container class="my-2">
       <v-layout row wrap>
-        <v-flex xs12 sm6 md4 lg3 v-for="star in stars" :key="star.name">
+        <v-flex xs12 sm6 md4 lg3 v-for="star in stars" :key="star.id">
     <v-card
     class="mx-auto text-xs-center ma-3 mr-3" 
     >
     <v-list-item>
       <v-list-item-avatar color="grey lighten-2" v-html="star.avatar" dark></v-list-item-avatar>
       <v-list-item-content>
-        <v-list-item-title class="headline">{{star.name}}</v-list-item-title>
+        <v-list-item-title class="headline">{{star.name}} </v-list-item-title>
         <v-list-item-subtitle>{{star.role}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
@@ -57,7 +57,15 @@ export default {
   },
   created()
   {
-    db.collection('stars').onSnapshot(res =>{
+     this.fetchdata();
+  },
+  watch: {
+    // call again the method if the route changes
+    '$route': 'fetchdata'
+  },
+  methods : {
+    fetchdata(){
+      db.collection('stars').onSnapshot(res =>{
        const changes = res.docChanges()
        changes.forEach(change => {
          if(change.type === 'added') {
@@ -69,6 +77,7 @@ export default {
        });
     }
     );
+    }
   }
 }
 </script>

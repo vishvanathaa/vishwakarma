@@ -8,7 +8,14 @@ const routes = [
   {
     path: '/',
     name: 'Dashboard',
-    component: Dashboard
+    component: Dashboard,
+    props: true
+  },
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: Dashboard,
+    props: true
   },
   {
     path: '/about',
