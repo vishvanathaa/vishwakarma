@@ -1,9 +1,12 @@
 <template>
+<div>
 <v-container>
+  <v-layout row wrap>
+        <v-flex xs12 sm9 md9 lg9 >
              <v-card
     :loading="loading"
     class="mx-auto"
-    max-width="600"
+    max-width="1200"
   >
     <v-img
       height="250"
@@ -46,13 +49,13 @@
         active-class="deep-purple accent-4 white--text"
         column
       >
-        <v-chip>5:30PM</v-chip>
+        <v-chip>7:30AM Breakfast</v-chip>
 
-        <v-chip>7:30PM</v-chip>
+        <v-chip>1:00PM Luch</v-chip>
 
-        <v-chip>8:00PM</v-chip>
+        <v-chip>4:00PM Snacks</v-chip>
 
-        <v-chip>9:00PM</v-chip>
+        <v-chip>9:00PM Dinner</v-chip>
       </v-chip-group>
     </v-card-text>
 
@@ -66,7 +69,9 @@
       </v-btn>
     </v-card-actions>
   </v-card>
+        </v-flex></v-layout>
       </v-container>
+</div>
       </template>
      
   <script>

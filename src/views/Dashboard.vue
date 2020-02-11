@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex xs12 sm6 md4 lg3 v-for="star in stars" :key="star.id">
     <v-card
-    class="mx-auto text-xs-center mb-3 mr-3" 
+    class="mx-auto text-xs-center mb-3 mr-1" 
     >
     <v-list-item>
       <v-list-item-avatar color="grey lighten-2" v-html="star.avatar" dark></v-list-item-avatar>
@@ -24,10 +24,10 @@
         Read
       </v-btn>
       <v-btn
-        text
-        color="deep-purple accent-4"
+        icon
+        color="blue"
       >
-        Share
+         <v-icon>mdi-facebook</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
       <v-btn icon>
