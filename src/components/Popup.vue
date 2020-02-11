@@ -49,8 +49,8 @@
         <v-divider></v-divider>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="orange darken-1"  @click="dialog = false" dark>Close</v-btn>
-          <v-btn color="orange darken-1" @click="submit" dark   :loading="loading">Save</v-btn>
+          <v-btn color="purple darken-1" text  @click="dialog = false" dark>Close</v-btn>
+          <v-btn color="purple darken-1" text @click="submit" dark   :loading="loading">Save</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

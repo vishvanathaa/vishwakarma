@@ -2,9 +2,13 @@
   <v-app>
     
     <Navbar/>
-    <v-content class="ma-2">
-     <router-view></router-view>
+    
+    <v-content class="ml-3">
+      <v-container>
+        <router-view></router-view>
+      </v-container>
     </v-content>
+    
   </v-app>
 </template>
 
