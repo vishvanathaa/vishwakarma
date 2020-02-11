@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="mx-auto my-5"
+    class="mx-auto"
     color="#26c6da"
     dark
     max-width="600"
@@ -12,7 +12,7 @@
       >
         mdi-twitter
       </v-icon>
-      <span class="title font-weight-light">Twitter</span>
+      <span class="title font-weight-light">Astrologer Tweet</span>
     </v-card-title>
 
     <v-card-text class="headline font-weight-regular">

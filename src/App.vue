@@ -3,8 +3,8 @@
     
     <Navbar/>
     
-    <v-content class="ml-3">
-      <v-container>
+    <v-content>
+      <v-container class="ml-2">
         <router-view></router-view>
       </v-container>
     </v-content>

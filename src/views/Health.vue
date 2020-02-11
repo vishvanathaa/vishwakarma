@@ -1,10 +1,8 @@
 <template>
-    
-
-<div>
+<v-container>
              <v-card
     :loading="loading"
-    class="mx-auto my-2"
+    class="mx-auto"
     max-width="600"
   >
     <v-img
@@ -68,7 +66,7 @@
       </v-btn>
     </v-card-actions>
   </v-card>
-      </div>
+      </v-container>
       </template>
      
   <script>

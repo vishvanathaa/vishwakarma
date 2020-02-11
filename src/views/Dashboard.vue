@@ -1,5 +1,5 @@
 <template>
-  <div class="team">
+  <div>
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 sm6 md4 lg3 v-for="star in stars" :key="star.id">
@@ -16,7 +16,6 @@
     <v-card-text>
       {{star.content.substring(0,280)+"...."}}
     </v-card-text>
-
     <v-card-actions>
       <v-btn
         text
