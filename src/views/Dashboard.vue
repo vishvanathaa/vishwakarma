@@ -9,12 +9,21 @@
     <v-list-item>
       <v-list-item-avatar color="grey lighten-2" v-html="star.avatar" dark></v-list-item-avatar>
       <v-list-item-content>
-        <v-list-item-title class="headline">{{star.name}} </v-list-item-title>
-        <v-list-item-subtitle>{{star.role}}</v-list-item-subtitle>
+        <v-list-item-title class="headline">{{star.starname}}</v-list-item-title>
+        <v-list-item-subtitle>{{star.role}}
+         
+        </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
     <v-card-text>
       {{star.content.substring(0,280)+"...."}}
+      <v-rating
+      v-model="rating"
+      background-color="orange lighten-3"
+      color="orange"
+      small
+      :length="length"
+    ></v-rating>
     </v-card-text>
     <v-card-actions>
       <v-btn
@@ -26,12 +35,14 @@
       <v-btn
         icon
         color="blue"
+        href="https://facebook.com/sharer/sharer.php?u=https://vishvanatha-acharya.herokuapp.com" target="_blank"
       >
          <v-icon>mdi-facebook</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+      <v-btn icon @click="incrementLikeCount">
+        <v-icon :color="likecount > 0 ? likeColor : 'gray'">mdi-heart </v-icon>
+        <v-badge color="white">{{likecount}}</v-badge>
       </v-btn>
       <v-btn icon>
         <v-icon>mdi-share-variant</v-icon>
@@ -51,7 +62,11 @@ export default {
   },
    data() {
     return {
-      stars : []
+      stars : [],
+       rating: 3,
+       length: 4,
+       likecount : 1,
+       likeColor : 'gray'
     }
   },
   created()
@@ -78,6 +93,14 @@ export default {
        });
     }
     );
+    },
+    incrementLikeCount : function(){
+        this.likecount++;
+        if(this.likecount > 0)
+        {
+          this.likeColor = 'pink';
+        }
+
     }
   }
 }

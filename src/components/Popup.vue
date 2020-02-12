@@ -19,29 +19,35 @@
           class="headline grey lighten-2"
           primary-title
         >
+        <v-icon>mdi-account</v-icon>
           My Prediction
         </v-card-title>
-
         <v-card-text>
-          <v-form class="px-3" ref="form">
+          <v-form  ref="form" class="mt-3">
           <v-row>
-              <v-col cols="12">
+              <v-col cols="12" >
                 <v-combobox
           v-model="star"
           :items="items"
           prepend-icon="mdi-star"
           chips
+           outlined
+          label="Zodiac Sign"
+          shaped
         ></v-combobox>
             </v-col>
           </v-row>
-          <v-row>
+          <v-row class="mt-n9 mb-n9">
             <v-col cols="12" >
                 <v-textarea
-                label="Enter prediction"
+                label="Prediction"
                 rows="5"
-                prepend-icon="mdi-book"
+                prepend-icon="mdi-nintendo-switch"
                 v-model="content"
-                :rules="inputRules"></v-textarea>
+                :rules="inputRules"
+                 outlined
+               shaped :clearable="clearable"
+                ></v-textarea>
             </v-col>
           </v-row>
           </v-form>
@@ -80,15 +86,15 @@
           'Pisces',
         ],
         content:'',
+        clearable : true,
         inputRules: [
           v => !!v || 'This field is required',
-          v => v.length >= 270 || 'Minimum length is 300 characters'
+          v => !!v && (v.length ? v.length : 0) >= 50 || 'Minimum length is 50 characters'
         ],
        loading: false
       }
     },
     methods: {
-    
     submit() {
       if(this.$refs.form.validate()) {
         this.loading = true

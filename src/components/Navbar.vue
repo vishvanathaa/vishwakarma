@@ -123,6 +123,7 @@ export default {
         { name: 'Pisces', role: 'Sales guru', avatar: '&#9811;'}
       ],
       snackbar: false
+     
     }
   }
 }
