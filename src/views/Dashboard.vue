@@ -24,14 +24,10 @@
       small
       :length="length"
     ></v-rating>
+    
     </v-card-text>
     <v-card-actions>
-      <v-btn
-        text
-        color="deep-purple accent-4"
-      >
-        Read
-      </v-btn>
+      <ReadStar :StarId = "filteredStar(star.id)"/>
       <v-btn
         icon
         color="blue"
@@ -56,9 +52,11 @@
 </template>
 <script>
 import db from '@/fb'
+import ReadStar from '@/components/ReadStar'
 export default {
   name: 'Dashboard',
   components: {
+    ReadStar
   },
    data() {
     return {
@@ -101,7 +99,13 @@ export default {
           this.likeColor = 'pink';
         }
 
-    }
+    },
+    filteredStar(id) {
+     return this.stars.filter(c => c.id.indexOf(id) > -1);
+   }
+  },
+  computed: {
+    
   }
 }
 </script>
