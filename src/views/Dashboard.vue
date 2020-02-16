@@ -2,6 +2,15 @@
   <div>
     <v-container>
       <v-layout row wrap>
+        <v-progress-circular
+      :size="70"
+      :width="7"
+      :value="100"
+      color="purple"
+      indeterminate
+      v-show="isLoading"
+      
+    ></v-progress-circular>
         <v-flex xs12 sm6 md4 lg3 v-for="star in stars" :key="star.id">
     <v-card
     class="mx-auto text-xs-center mb-3 mr-1" 
@@ -26,7 +35,7 @@
     ></v-rating>
     
     </v-card-text>
-    <v-card-actions>
+    <v-card-actions class="mt-n5">
       <ReadStar :StarId = "filteredStar(star.id)"/>
       <v-btn
         icon
@@ -36,8 +45,9 @@
          <v-icon>mdi-facebook</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
+      <Comments/>
       <v-btn icon @click="incrementLikeCount">
-        <v-icon :color="likecount > 0 ? likeColor : 'gray'">mdi-heart </v-icon>
+        <v-icon :color="likecount > 0 ? likeColor : 'grey'">mdi-heart</v-icon>
         <v-badge color="white">{{likecount}}</v-badge>
       </v-btn>
       <v-btn icon>
@@ -53,10 +63,12 @@
 <script>
 import db from '@/fb'
 import ReadStar from '@/components/ReadStar'
+import Comments from '@/components/Comments'
 export default {
   name: 'Dashboard',
   components: {
-    ReadStar
+    ReadStar,
+    Comments
   },
    data() {
     return {
@@ -64,7 +76,8 @@ export default {
        rating: 3,
        length: 4,
        likecount : 1,
-       likeColor : 'gray'
+       likeColor : 'grey',
+       isLoading : true
     }
   },
   created()
@@ -74,7 +87,7 @@ export default {
   watch: {
     // call again the method if the route changes
     //'$route': 'fetchdata'
-    '$route.path': 'getData'
+    '$route.path': 'fetchdata'
   },
   
   methods : {
@@ -89,6 +102,7 @@ export default {
           })
          }
        });
+       this.isLoading = false;
     }
     );
     },
@@ -103,9 +117,6 @@ export default {
     filteredStar(id) {
      return this.stars.filter(c => c.id.indexOf(id) > -1);
    }
-  },
-  computed: {
-    
   }
 }
 </script>
