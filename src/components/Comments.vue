@@ -84,7 +84,7 @@
         </v-col>
     </v-row>
     <v-row style="border: 0px solid grey" class="mt-n6">
-      <v-col cols="6" >
+      <v-col cols="12" >
         <div class="d-flex flex-column emoji-12" >
           <div class="d-flex flex-row emoji-12"   >
             <v-btn-toggle >
@@ -92,11 +92,6 @@
               <v-btn text @click="addEmoji('&#9760;')" color="orange darken-5"  >&#9760;</v-btn>
               <v-btn text @click="addEmoji('&#127769;')" color="orange darken-5"  >&#127769;</v-btn>
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
             </v-btn-toggle>
@@ -109,11 +104,6 @@
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#128076;')" color="orange darken-5" >&#128076;</v-btn>
               <v-btn text @click="addEmoji('&#128151;')" color="orange darken-5" >&#128151;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
             </v-btn-toggle>
           </div>
           <div class="d-flex flex-row emoji-12"   >
@@ -122,11 +112,6 @@
               <v-btn text @click="addEmoji('&#128014;')" color="orange darken-5"  >&#128014;</v-btn>
               <v-btn text @click="addEmoji('&#128018;')" color="orange darken-5"  >&#128018;</v-btn>
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
             </v-btn-toggle>
