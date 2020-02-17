@@ -16,6 +16,7 @@
          v-on="on" text color="grey" 
       >
           <v-icon>mdi-comment</v-icon>
+
         </v-btn>
       </template>
       
@@ -27,15 +28,22 @@
           class="headline mb-n12"
           primary-title 
         >
-        <v-icon>mdi-comment</v-icon>
-          <div class="overline ml-6" color="purple darken-1">COMMENTS</div>
+        <div class="d-flex flex-row">
+          <div class="overline" color="purple darken-1">
+          <v-icon>mdi-comment</v-icon>
+          COMMENTS</div>
+    </div>
+    <v-col class="text-right">
+         <v-btn color="purple darken-1" icon  @click="dialog = false" dark><v-icon>mdi-close</v-icon></v-btn>
+    </v-col>
+        
         </v-card-title>
        
      
-  <v-card-text class="mt-n12" >
+  <v-card-text class="mt-0" >
      
-     <v-list  class="mt-n12 ml-n6">
-      <template v-for="(item, index) in items" class="mt-n12 ml-n6">
+     <v-list  class="mt-0 ml-0">
+      <template v-for="(item, index) in items" class="mt-0 ml-0">
         
 
         <v-divider
@@ -68,19 +76,14 @@
                   rounded
                   dense
                 v-model="comment">
-                
+                <template slot="append"><div v-html='emoji'/></template>
                 </v-text-field>
-                
-                
               <v-btn icon @click="pushComments()" >
               <v-icon >mdi-send</v-icon></v-btn>
           </div>
-          <div class="d-flex flex-row" >
-            <div  color="orange darken-5" v-html="combinedText"></div>
-          </div>
         </v-col>
     </v-row>
-    <v-row style="border: 0px solid grey">
+    <v-row style="border: 0px solid grey" class="mt-n6">
       <v-col cols="6" >
         <div class="d-flex flex-column emoji-12" >
           <div class="d-flex flex-row emoji-12"   >
@@ -116,19 +119,13 @@
         </div>
       </v-col>
     </v-row>
-
-
-        
   </v-card-text>
   <v-card-actions>
       <v-btn color="purple darken-1" text  @click="dialog = false" dark>Close</v-btn>
   </v-card-actions>
       </v-card>
     </v-dialog>
-      
-       
   </div>
-     
 </template>
 <script>
   export default {
