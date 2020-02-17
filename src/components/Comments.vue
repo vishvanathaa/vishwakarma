@@ -40,7 +40,7 @@
         </v-card-title>
        
      
-  <v-card-text class="mt-0" >
+  <v-card-text class="mt-n12" >
      
      <v-list  class="mt-0 ml-0">
       <template v-for="(item, index) in items" class="mt-0 ml-0">
@@ -54,7 +54,7 @@
 
         <v-list-item
           v-else
-          :key="item.title"
+          :key="item.index"
         >
           <v-list-item-avatar>
             <v-img :src="item.avatar"></v-img>
@@ -68,7 +68,7 @@
       </template>
     </v-list>
     <v-row>
-        <v-col cols="12" sm="10" md="10">
+        <v-col cols="12" sm="12" md="12">
           <div class="d-flex flex-row emoji-12" >
           <v-text-field
                   placeholder="Write comment here..."
@@ -76,7 +76,7 @@
                   rounded
                   dense
                 v-model="comment">
-                <template slot="append"><div v-html='emoji'/></template>
+                <template slot="append"><div v-html='emoji'/><a @click="clearContent" class="ml-2" >x</a> </template>
                 </v-text-field>
               <v-btn icon @click="pushComments()" >
               <v-icon >mdi-send</v-icon></v-btn>
@@ -94,6 +94,11 @@
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
             </v-btn-toggle>
           </div>
           <div class="d-flex flex-row emoji-12"   >
@@ -104,6 +109,11 @@
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#128076;')" color="orange darken-5" >&#128076;</v-btn>
               <v-btn text @click="addEmoji('&#128151;')" color="orange darken-5" >&#128151;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
             </v-btn-toggle>
           </div>
           <div class="d-flex flex-row emoji-12"   >
@@ -114,8 +124,14 @@
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
               <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
             </v-btn-toggle>
           </div>
+          
         </div>
       </v-col>
     </v-row>
@@ -134,7 +150,7 @@
         { header: 'Comments' },
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-          title: 'Raviprakash HS',
+          title: 'Vishvanatha Achary',
           subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
         },
         { divider: true, inset: true },
@@ -171,7 +187,7 @@
       {
         this.items.push({
           avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
-          title: 'unknown',
+          title: 'Guest User',
           subtitle: this.comment + ' ' + this.emoji,
         }
         )
@@ -181,6 +197,11 @@
       {
         this.emoji = this.emoji + code;
         
+     },
+     clearContent : function()
+     {
+       this.comment = '';
+       this.emoji = '';
      }
     },
     computed: {
