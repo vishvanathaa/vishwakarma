@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div> 
       
     <v-dialog
       v-model="dialog"
@@ -21,17 +21,18 @@
       </template>
       
       <v-card
-    class = "mx-auto"
+    class = "mx-auto pr-0"
     
   >
  <v-card-title
-          class="headline mb-n12"
+          class="headline mt-5"
+          style="margin-bottom: -50px;"
           primary-title 
         >
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-row ml-2">
           <div class="overline" color="purple darken-1">
-          <v-icon>mdi-comment</v-icon>
-          COMMENTS</div>
+          <v-icon class="mr-4">mdi-comment</v-icon>
+         COMMENTS</div>
     </div>
     <v-col class="text-right">
          <v-btn color="purple darken-1" icon  @click="dialog = false" dark><v-icon>mdi-close</v-icon></v-btn>
@@ -40,7 +41,7 @@
         </v-card-title>
        
      
-  <v-card-text class="ml-n4" >
+  <v-card-text>
      
      <v-list  class="">
       <template v-for="(item, index) in items" class="mt-0 ml-0">
