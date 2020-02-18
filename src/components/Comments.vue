@@ -1,6 +1,6 @@
 <template>
 
-  <div class="ml-n8">
+  <div>
       
     <v-dialog
       v-model="dialog"
@@ -40,9 +40,9 @@
         </v-card-title>
        
      
-  <v-card-text class="mt-n12" >
+  <v-card-text class="ml-n4" >
      
-     <v-list  class="mt-0 ml-0">
+     <v-list  class="">
       <template v-for="(item, index) in items" class="mt-0 ml-0">
         
 
@@ -54,20 +54,20 @@
 
         <v-list-item
           v-else
-          :key="item.index"
+          :key="item.index" class="mt-n0 ml-n2"
         >
           <v-list-item-avatar>
             <v-img :src="item.avatar"></v-img>
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title v-html="item.title"></v-list-item-title>
-            <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+            <v-list-item-title v-html="item.title" class="v-ctm-title"></v-list-item-title>
+            <v-list-item-subtitle v-html="item.subtitle" class="v-ctm-subtitle"></v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </template>
     </v-list>
-    <v-row>
+    <v-row class="mt-n2 ml-1">
         <v-col cols="12" sm="12" md="12">
           <div class="d-flex flex-row emoji-12" >
           <v-text-field
@@ -76,24 +76,24 @@
                   rounded
                   dense
                 v-model="comment">
-                <template slot="append"><div v-html='emoji'/><a @click="clearContent" class="ml-2" >x</a> </template>
+                <template slot="append"><div v-html='emoji' class="d-flex flex-row"/><a @click="clearContent" class="ml-2" >x</a> </template>
                 </v-text-field>
               <v-btn icon @click="pushComments()" >
               <v-icon >mdi-send</v-icon></v-btn>
           </div>
         </v-col>
     </v-row>
-    <v-row style="border: 0px solid grey" class="mt-n6">
+    <v-row style="border: 0px solid grey" class="mt-n8 ml-1">
       <v-col cols="12" >
         <div class="d-flex flex-column emoji-12" >
           <div class="d-flex flex-row emoji-12"   >
             <v-btn-toggle >
               <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#9760;')" color="orange darken-5"  >&#9760;</v-btn>
+              <v-btn text @click="addEmoji('&#128068;')" color="orange darken-5"  >&#128068;</v-btn>
               <v-btn text @click="addEmoji('&#127769;')" color="orange darken-5"  >&#127769;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128151;')" color="orange darken-5" >&#128151;</v-btn>
+              <v-btn text @click="addEmoji('&#128400;')" color="orange darken-5" >&#128400;</v-btn>
+            
             </v-btn-toggle>
           </div>
           <div class="d-flex flex-row emoji-12"   >
@@ -101,19 +101,19 @@
               <v-btn text @click="addEmoji('&#128038;')" color="orange darken-5"  >&#128038;</v-btn>
               <v-btn text @click="addEmoji('&#128024;')" color="orange darken-5"  >&#128024;</v-btn>
               <v-btn text @click="addEmoji('&#128059;')" color="orange darken-5"  >&#128059;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#128514;')" color="orange darken-5" >&#128514;</v-btn>
               <v-btn text @click="addEmoji('&#128076;')" color="orange darken-5" >&#128076;</v-btn>
-              <v-btn text @click="addEmoji('&#128151;')" color="orange darken-5" >&#128151;</v-btn>
+            
             </v-btn-toggle>
           </div>
-          <div class="d-flex flex-row emoji-12"   >
+          <div class="d-flex flex-row emoji-12">
              <v-btn-toggle >
               <v-btn text @click="addEmoji('&#128149;')" color="orange darken-5"  >&#128149;</v-btn>
               <v-btn text @click="addEmoji('&#128014;')" color="orange darken-5"  >&#128014;</v-btn>
-              <v-btn text @click="addEmoji('&#128018;')" color="orange darken-5"  >&#128018;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5"  >&#128548;</v-btn>
-              <v-btn text @click="addEmoji('&#128548;')" color="orange darken-5" >&#128548;</v-btn>
+              <v-btn text @click="addEmoji('&#128512;')" color="orange darken-5"  >&#128512;</v-btn>
               <v-btn text @click="addEmoji('&#127939;')" color="orange darken-5" >&#127939;</v-btn>
+              <v-btn text @click="addEmoji('&#128525;')" color="orange darken-5" >&#128525;</v-btn>
+           
             </v-btn-toggle>
           </div>
           
@@ -201,6 +201,12 @@
 <style scoped>
   .emoji-12
   {
-    font-size:0px;
+    font-size:8px;
+  }
+  .v-ctm-subtitle {
+    font-size: 0.75rem;
+  }
+  .v-ctm-title {
+    font-size: 0.85rem;
   }
 </style>
