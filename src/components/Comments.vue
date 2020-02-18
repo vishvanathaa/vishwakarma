@@ -55,7 +55,7 @@
 
         <v-list-item
           v-else
-          :key="item.index" class="mt-n0 ml-n2"
+          :key="item.index" 
         >
           <v-list-item-avatar>
             <v-img :src="item.avatar"></v-img>
@@ -68,7 +68,7 @@
         </v-list-item>
       </template>
     </v-list>
-    <v-row class="mt-n2 ml-1">
+    <v-row class="ml-1">
         <v-col cols="12" sm="12" md="12">
           <div class="d-flex flex-row emoji-12" >
           <v-text-field
@@ -84,7 +84,7 @@
           </div>
         </v-col>
     </v-row>
-    <v-row style="border: 0px solid grey" class="mt-n8 ml-1">
+    <v-row style="border: 0px solid grey" class="mt-n5 ml-1">
       <v-col cols="12" >
         <div class="d-flex flex-column emoji-12" >
           <div class="d-flex flex-row emoji-12"   >
