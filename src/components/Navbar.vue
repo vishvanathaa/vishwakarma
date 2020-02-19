@@ -11,18 +11,10 @@
       dark  app
     >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
       <v-toolbar-title><span class="font-weight-light">Astro</span>
         <span>Science</span>
-        
         </v-toolbar-title>
-
       <v-spacer></v-spacer>
-
-      <!-- <v-btn icon>
-        <v-icon>mdi-heart</v-icon>np
-      </v-btn> -->
-
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
@@ -40,7 +32,7 @@
           <v-list-item
             v-for="menu in menus"
             :key="menu.name"
-            @click="() => {}">
+           :to="{ name: 'ZodiacSign', params: { id: menu.name } }">
             <v-list-item-icon  v-html="menu.avatar" ></v-list-item-icon >
             <v-list-item-content class="ml-n4">
                {{ menu.name }}

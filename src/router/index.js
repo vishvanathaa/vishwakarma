@@ -4,7 +4,7 @@ import Dashboard from '../views/Dashboard.vue'
 import ConfirmationAdd from '../views/ConfirmationAdd.vue'
 import Health from '../views/Health.vue'
 import Education from '../views/Education.vue'
-
+import ZodiacSign from '../views/ZodiacSign.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -17,6 +17,11 @@ const routes = [
     path: '/Education',
     name: 'Education',
     component: Education
+  },
+  {
+    path: '/ZodiacSign/:id',
+    name: 'ZodiacSign',
+    component: ZodiacSign
   },
   {
     path: '/',
