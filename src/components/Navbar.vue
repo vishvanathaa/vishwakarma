@@ -112,7 +112,7 @@ export default {
         { name: 'Virgo', role: 'Web developer', avatar: '&#9805;' },
         { name: 'Libra', role: 'Graphic designer', avatar: '&#9806;' },
         { name: 'Scorpio', role: 'Web developer', avatar: '&#9807;' },
-        { name: 'Sagattarius', role: 'Social media maverick', avatar: '&#9808;' },
+        { name: 'Sagittarius', role: 'Social media maverick', avatar: '&#9808;' },
         { name: 'Capricorn', role: 'Sales guru', avatar: '&#9809;'},
         { name: 'Aquarius', role: 'Social media maverick', avatar: '&#9810;' },
         { name: 'Pisces', role: 'Sales guru', avatar: '&#9811;'}
