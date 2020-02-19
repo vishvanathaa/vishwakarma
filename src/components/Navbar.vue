@@ -12,8 +12,10 @@
     >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title><span class="font-weight-light">Vishwa</span>
-        <span>KARMA</span></v-toolbar-title>
+      <v-toolbar-title><span class="font-weight-light">Astro</span>
+        <span>Science</span>
+        
+        </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -39,9 +41,10 @@
             v-for="menu in menus"
             :key="menu.name"
             @click="() => {}">
-            <v-list-item-icon  v-html="menu.avatar" >
-          </v-list-item-icon >
-         <v-list-item-title > {{ menu.name }}</v-list-item-title>
+            <v-list-item-icon  v-html="menu.avatar" ></v-list-item-icon >
+            <v-list-item-content class="ml-n4">
+               {{ menu.name }}
+            </v-list-item-content>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -52,8 +55,8 @@
     <v-navigation-drawer app v-model="drawer" temporary  color="primary" dark>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title">
-            ASTROLOGY
+          <v-list-item-title class="title caption">
+            Ancient Indian Vedic Science
             
           </v-list-item-title>
           

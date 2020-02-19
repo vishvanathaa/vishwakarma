@@ -41,7 +41,7 @@
             <v-col cols="12" >
                 <v-textarea
                 label="Prediction"
-                rows="5"
+                rows="7"
                 prepend-icon="mdi-nintendo-switch"
                 v-model="content"
                 :rules="inputRules"
