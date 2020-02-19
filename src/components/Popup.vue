@@ -80,7 +80,7 @@
           'Virgo',
           'Libra',
           'Scorpio',
-          'Sagattarius',
+          'Sagittarius',
           'Capricorn',
           'Aquarius',
           'Pisces',
@@ -137,6 +137,9 @@
           case "Virgo":
             starId = "gwuQLVSTysXziUuX8KKs";
             break;
+          default:
+            starId = "as8gKX5i3gThQxpu4iNq";
+            break;  
         }
         db.collection('stars').doc(starId).update({content: this.content}).then(() => {
           this.loading = false
