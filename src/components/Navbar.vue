@@ -11,7 +11,9 @@
       dark  app
     >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title><span class="font-weight-light">Astro</span>
+      <v-toolbar-title>
+        <v-icon class="mr-1 mb-1">mdi-hinduism</v-icon>
+        <span class="font-weight-light">Astro</span>
         <span>Science</span>
         </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -96,12 +98,12 @@ export default {
         { icon: 'mdi-desktop-classic', text: 'Career', route: '/Career' },
         { icon: 'mdi-xbox', text: 'Foreign Travel', route: '/ForeignTravel' },
         { icon: 'mdi-playstation', text: 'Visa', route: '/Visa' },
-        { icon: 'mdi-nintendo-switch', text: 'Marriage', route: '/Marriage' },
+        { icon: 'mdi-human-male-female', text: 'Marriage', route: '/Marriage' },
         { icon: 'mdi-heart', text: 'Love and Relationship', route: '/Relationship' },
        
-        { icon: 'mdi-currency-inr', text: 'Money', route: '/Money' },
-        { icon: 'mdi-dropbox', text: 'Land', route: '/Land' },
-         { icon: 'mdi-chart-multiple', text: 'Research and analysis', route: '/team8' },
+        { icon: 'mdi-currency-inr', text: 'Finance', route: '/Money' },
+        { icon: 'mdi-home-city-outline', text: 'Land', route: '/Land' },
+         { icon: 'mdi-chart-multiple', text: 'Research and analysis', route: '/Research' },
       ],
       menus: [
         { name: 'Aries', role: 'Web developer', avatar: '&#9800;' },
