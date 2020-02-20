@@ -5,9 +5,24 @@ import ConfirmationAdd from '../views/ConfirmationAdd.vue'
 import Health from '../views/Health.vue'
 import Education from '../views/Education.vue'
 import ZodiacSign from '../views/ZodiacSign.vue'
+import Research from '@/views/Research'
+import ForeignTravel from '../views/Foreigntravel'
+import Visa from '../views/Visa'
+import Marriage from '../views/Marriage'
+import Relationship from '../views/Relationship'
+import Money from '../views/Money'
+import Land from '../views/Land'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    name: 'Dashboard',
+    component: Dashboard,
+    props: true,
+    meta: {
+      reload: true,}
+  },
   {
     path: '/Health',
     name: 'Health',
@@ -19,18 +34,45 @@ const routes = [
     component: Education
   },
   {
+    path: '/Marriage',
+    name: 'Marriage',
+    component: Marriage
+  },
+  
+  {
+    path: '/Relationship',
+    name: 'Relationship',
+    component: Relationship
+  },
+  {
     path: '/ZodiacSign/:id',
     name: 'ZodiacSign',
     component: ZodiacSign
   },
   {
-    path: '/',
-    name: 'Dashboard',
-    component: Dashboard,
-    props: true,
-    meta: {
-      reload: true,
-    }
+    path : '/Money',
+    name : 'Money',
+    component : Money
+  },
+  {
+    path : '/ForeignTravel',
+    name : 'ForeignTravel',
+    component : ForeignTravel
+  },
+  {
+    path: '/Research',
+    name: 'Research',
+    component: Research
+  },
+  {
+    path: '/Visa',
+    name: 'Visa',
+    component: Visa
+  },
+  {
+    path: '/Land',
+    name: 'Land',
+    component: Land
   },
   {
     path: '/ConfirmationAdd',
