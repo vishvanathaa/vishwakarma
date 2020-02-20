@@ -3,7 +3,7 @@
     <v-card-title class="mt-20">
       <div>
         <div class="text-uppercase font-weight-black text-center headlineText mt-5">
-          THE INDIAN EXPRESS
+          THE INIDIAN EXIPRESS
           <AddNews @projectAdded="snackbar = true" />
         </div>
 
