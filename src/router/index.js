@@ -5,7 +5,7 @@ import ConfirmationAdd from '../views/ConfirmationAdd.vue'
 import Health from '../views/Health.vue'
 import Education from '../views/Education.vue'
 import ZodiacSign from '../views/ZodiacSign.vue'
-import Research from '@/views/Research'
+
 import ForeignTravel from '../views/Foreigntravel'
 import Visa from '../views/Visa'
 import Marriage from '../views/Marriage'
@@ -58,11 +58,6 @@ const routes = [
     path : '/ForeignTravel',
     name : 'ForeignTravel',
     component : ForeignTravel
-  },
-  {
-    path: '/Research',
-    name: 'Research',
-    component: Research
   },
   {
     path: '/Visa',
