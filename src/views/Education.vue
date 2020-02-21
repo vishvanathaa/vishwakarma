@@ -1,12 +1,11 @@
 <template>
 <v-container>
-  <v-layout row wrap>
-        <v-flex xs12 sm9 md9 lg9 >
+  
   <v-card
     class="mx-auto"
     color="#26c6da"
     dark
-    max-width="800"
+    
   >
     <v-card-title color="white">
       <v-icon
@@ -19,9 +18,11 @@
     </v-card-title>
 
     <v-card-text class="font-weight-regular">
+      <v-layout row wrap>
+         <v-flex xs12 sm6 md4 lg3 v-for="star in educations" :key="star.name">
       <v-card
     class="mx-auto text-xs-center mb-3 mr-1" 
-    v-for="star in educations" :key="star.name" color="gray lighten-4" light >
+     color="gray lighten-4" light >
     <v-list-item>
       <v-list-item-avatar color="grey lighten-2" v-html="star.avatar"></v-list-item-avatar>
       <v-list-item-content>
@@ -54,6 +55,8 @@
       </v-btn>
     </v-card-actions>
   </v-card>
+         </v-flex>
+      </v-layout>
     </v-card-text>
 
     <v-card-actions>
@@ -82,9 +85,7 @@
       </v-list-item>
     </v-card-actions>
   </v-card>
-        </v-flex>
-  </v-layout>
-</v-container>
+  </v-container>
   </template>
   <script>
 export default {

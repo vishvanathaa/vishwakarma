@@ -5,14 +5,14 @@ import ConfirmationAdd from '../views/ConfirmationAdd.vue'
 import Health from '../views/Health.vue'
 import Education from '../views/Education.vue'
 import ZodiacSign from '../views/ZodiacSign.vue'
-
+import Research from '@/views/Research.vue'
+import Career from '../views/Career.vue'
 import ForeignTravel from '../views/Foreigntravel.vue'
 import Visa from '../views/Visa.vue'
-
+import Marriage from '../views/Marriage.vue'
 import Relationship from '../views/Relationship.vue'
 import Money from '../views/Money.vue'
 import Land from '../views/Land.vue'
-import Marriage from '../views/Marriage.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,7 +39,11 @@ const routes = [
     name: 'Marriage',
     component: Marriage
   },
-  
+  {
+    path : '/Career',
+    name : 'Career',
+    component : Career
+  },
   {
     path: '/Relationship',
     name: 'Relationship',
@@ -59,6 +63,11 @@ const routes = [
     path : '/ForeignTravel',
     name : 'ForeignTravel',
     component : ForeignTravel
+  },
+  {
+    path: '/Research',
+    name: 'Research',
+    component: Research
   },
   {
     path: '/Visa',
