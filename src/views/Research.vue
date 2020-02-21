@@ -1,6 +1,7 @@
 <template>
-    <div>
-
+   
+  
+       
             <GChart
                 :settings="{packages: ['bar']}"    
                 :data="chartData"
@@ -8,7 +9,9 @@
                 :createChart="(el, google) => new google.charts.Bar(el)"
                 @ready="onChartReady"
             />
-    </div>      
+        
+  
+        
     
 </template>
 <script>

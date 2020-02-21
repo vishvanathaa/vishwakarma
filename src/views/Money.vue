@@ -4,7 +4,7 @@
     class="mx-auto"
     color="#e46902"
     dark
-    max-width="800"
+    
   >
     <v-card-title>
       <v-icon
@@ -17,9 +17,11 @@
     </v-card-title>
 
     <v-card-text class="headline font-weight-regular">
+      <v-layout row wrap>
+         <v-flex xs12 sm6 md4 lg3 v-for="star in educations" :key="star.name">
         <v-card
       class="mx-auto text-xs-center mb-3 mr-1" 
-      v-for="star in educations" :key="star.name" color="gray lighten-4" light >
+       color="gray lighten-4" light >
       <v-list-item>
         <v-list-item-avatar color="grey lighten-2" v-html="star.avatar"></v-list-item-avatar>
         <v-list-item-content>
@@ -28,7 +30,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-card-text>
-        {{star.content}}
+        {{star.content.substring(0,280)+"...."}}
       </v-card-text>
       <v-card-actions>
         <v-btn
@@ -52,6 +54,8 @@
         </v-btn>
       </v-card-actions>
     </v-card>
+         </v-flex>
+      </v-layout>
     </v-card-text>
 
     <v-card-actions>
