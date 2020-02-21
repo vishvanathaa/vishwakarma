@@ -1,7 +1,12 @@
 <template>
+<<<<<<< HEAD
    
   
        
+=======
+    <div>
+
+>>>>>>> Implemented left menu
             <GChart
                 :settings="{packages: ['bar']}"    
                 :data="chartData"
@@ -9,9 +14,13 @@
                 :createChart="(el, google) => new google.charts.Bar(el)"
                 @ready="onChartReady"
             />
+<<<<<<< HEAD
         
   
         
+=======
+    </div>      
+>>>>>>> Implemented left menu
     
 </template>
 <script>

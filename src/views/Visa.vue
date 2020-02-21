@@ -4,7 +4,11 @@
     class="mx-auto"
     color="#535ead"
     dark
+<<<<<<< HEAD
    
+=======
+    max-width="800"
+>>>>>>> Implemented left menu
   >
     <v-card-title>
       <v-icon
@@ -17,8 +21,11 @@
     </v-card-title>
 
     <v-card-text class="headline font-weight-regular">
+<<<<<<< HEAD
       <v-layout row wrap>
          <v-flex xs12 sm6 md4 lg3 v-for="star in educations" :key="star.name">
+=======
+>>>>>>> Implemented left menu
         <v-card
       class="mx-auto text-xs-center mb-3 mr-1" 
       v-for="star in educations" :key="star.name" color="gray lighten-4" light >
@@ -30,7 +37,11 @@
         </v-list-item-content>
       </v-list-item>
       <v-card-text>
+<<<<<<< HEAD
        {{star.content.substring(0,280)+"...."}}
+=======
+        {{star.content}}
+>>>>>>> Implemented left menu
       </v-card-text>
       <v-card-actions>
         <v-btn
@@ -54,8 +65,11 @@
         </v-btn>
       </v-card-actions>
     </v-card>
+<<<<<<< HEAD
          </v-flex>
       </v-layout>
+=======
+>>>>>>> Implemented left menu
     </v-card-text>
 
     <v-card-actions>
