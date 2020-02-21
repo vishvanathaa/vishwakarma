@@ -21,7 +21,7 @@
          <v-flex xs12 sm6 md4 lg3 v-for="star in educations" :key="star.name">
         <v-card
       class="mx-auto text-xs-center mb-3 mr-1" 
-      v-for="star in educations" :key="star.name" color="gray lighten-4" light >
+      color="gray lighten-4" light >
       <v-list-item>
         <v-list-item-avatar color="grey lighten-2" v-html="star.avatar"></v-list-item-avatar>
         <v-list-item-content>
