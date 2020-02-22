@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
    
   
        
@@ -7,6 +8,11 @@
     <div>
 
 >>>>>>> Implemented left menu
+=======
+   
+  
+       
+>>>>>>> 66b08f9e2fbb36113d58fe6f6254694801f716a7
             <GChart
                 :settings="{packages: ['bar']}"    
                 :data="chartData"
@@ -15,12 +21,18 @@
                 @ready="onChartReady"
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
         
   
         
 =======
     </div>      
 >>>>>>> Implemented left menu
+=======
+        
+  
+        
+>>>>>>> 66b08f9e2fbb36113d58fe6f6254694801f716a7
     
 </template>
 <script>
