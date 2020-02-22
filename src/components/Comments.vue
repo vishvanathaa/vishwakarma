@@ -20,50 +20,41 @@
         </v-btn>
       </template>
       
-      <v-card
-    class = "mx-auto pr-0"
-    
+     <v-card
+   
+    class="mx-auto"
   >
- <v-card-title
-          class="headline mt-5"
-          style="margin-bottom: -50px;"
-          primary-title 
+    <v-card-text>
+    <template>
+    <v-list three-line >
+      <template v-for="(item, index) in items">
+        <v-card-actions
+          v-if="item.header"
+          :key="item.header"
+         
         >
-        <div class="d-flex flex-row ml-2">
-          <div class="overline" color="purple darken-1">
-          <v-icon class="mr-4">mdi-comment</v-icon>
-         COMMENTS</div>
-    </div>
-    <v-col class="text-right">
-         <v-btn color="purple darken-1" icon  @click="dialog = false" dark><v-icon>mdi-close</v-icon></v-btn>
-    </v-col>
-        
-        </v-card-title>
-       
-     
-  <v-card-text>
-     
-     <v-list  class="">
-      <template v-for="(item, index) in items" class="mt-0 ml-0">
-        
+        <span class="ml-2">COMMENTS</span>
+        <v-spacer></v-spacer>
+        <v-btn color="purple darken-1" text  @click="dialog = false" dark>Close</v-btn></v-card-actions>
 
         <v-divider
-          v-if="item.divider"
+          v-else-if="item.divider"
           :key="index"
-          :inset="item.inset" 
+          :inset="item.inset"
         ></v-divider>
 
         <v-list-item
           v-else
-          :key="item.index" 
+          :key="item.title"
+        
         >
-          <v-list-item-avatar>
-            <v-img :src="item.avatar"></v-img>
+          <v-list-item-avatar color="grey lighten-2">
+            <v-icon>mdi-account</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title v-html="item.title" class="v-ctm-title"></v-list-item-title>
-            <v-list-item-subtitle v-html="item.subtitle" class="v-ctm-subtitle"></v-list-item-subtitle>
+            <v-list-item-title v-html="item.title"></v-list-item-title>
+            <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </template>
@@ -121,11 +112,10 @@
         </div>
       </v-col>
     </v-row>
-  </v-card-text>
-  <v-card-actions>
-      <v-btn color="purple darken-1" text  @click="dialog = false" dark>Close</v-btn>
-  </v-card-actions>
-      </v-card>
+    </template>
+    </v-card-text>
+  </v-card>
+
     </v-dialog>
   </div>
 </template>
@@ -133,7 +123,7 @@
   export default {
     data: () => ({
       items: [
-        { header: 'Comments' },
+        { header: 'COMMENTS' },
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
           title: 'Vishvanatha Achary',
@@ -142,27 +132,15 @@
         { divider: true, inset: true },
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-          title: 'Summer BBQ <span class="grey--text text--lighten-1">12h</span>',
+          title: 'Roger Federer <span class="grey--text text--lighten-1">12h</span>',
           subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.",
         },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-          title: 'Oui oui',
-          subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?",
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
-          title: 'Birthday gift',
-          subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?",
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
-          title: 'Recipe to try',
-          subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
-        },
+        // { divider: true, inset: true },
+        // {
+        //   avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+        //   title: 'Oui oui',
+        //   subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?",
+        // }
       ],
        dialog: false,
        comment : '',
