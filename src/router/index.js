@@ -5,10 +5,6 @@ import ConfirmationAdd from '../views/ConfirmationAdd.vue'
 import Health from '../views/Health.vue'
 import Education from '../views/Education.vue'
 import ZodiacSign from '../views/ZodiacSign.vue'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 66b08f9e2fbb36113d58fe6f6254694801f716a7
 import Research from '@/views/Research.vue'
 import Career from '../views/Career.vue'
 import ForeignTravel from '../views/Foreigntravel.vue'
@@ -17,19 +13,6 @@ import Marriage from '../views/Marriage.vue'
 import Relationship from '../views/Relationship.vue'
 import Money from '../views/Money.vue'
 import Land from '../views/Land.vue'
-<<<<<<< HEAD
-=======
-import Research from '@/views/Research'
-import Career from '../views/Career'
-import ForeignTravel from '../views/ForeignTravel'
-import Visa from '../views/Visa'
-import Marriage from '../views/Marriage'
-import Relationship from '../views/Relationship'
-import Money from '../views/Money'
-import Land from '../views/Land'
->>>>>>> Implemented left menu
-=======
->>>>>>> 66b08f9e2fbb36113d58fe6f6254694801f716a7
 Vue.use(VueRouter)
 
 const routes = [
