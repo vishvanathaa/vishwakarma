@@ -45,7 +45,7 @@
          <v-icon>mdi-facebook</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
-      <Comments/>
+      <Comments :zodiacSign='star.name'/>
       <v-btn icon @click="incrementLikeCount">
         <v-icon :color="likecount > 0 ? likeColor : 'grey'">mdi-heart</v-icon>
         <v-badge color="white">{{likecount}}</v-badge>
