@@ -45,7 +45,7 @@
                           label="Enter Name"
                           :rules="inputRules"
                           v-model="name"
-                          shaped
+                          
                           prepend-inner-icon="mdi-account"
                         ></v-text-field>
                       </v-col>
@@ -133,22 +133,47 @@ export default {
       });
     },
     fetchdata() {
-      db.collection("Comments").onSnapshot(res => {
-        const changes = res.docChanges();
-        changes.forEach(change => {
-          if (change.type === "added") {
-            this.items.push({
-              ...change.doc.data(),
-              id: change.doc.id
-            });
-          }
-        });
-      });
+      db.collection("Comments")
+        .where("StarId", "==", this.getStarId())
+        //.orderBy('EntryTime')
+        .onSnapshot(res => {
+          const changes = res.docChanges();
+          changes.forEach(change => {
+            if (change.type === "added") {
+              this.items.push({
+                ...change.doc.data(),
+                id: change.doc.id
+              });
+            }
+          });
+        })
+        
+        ;
     },
     addComments: function() {
-      this.loading = true;
       if (this.$refs.form.validate()) {
-        var starId;
+        this.loading = true;
+        var comment = {
+          StarId: this.getStarId(),
+          Name: this.name,
+          Comment: this.comment + " " + this.emoji,
+          EntryTime: this.getEntryTime()
+        };
+        db.collection("Comments")
+          .add(comment)
+          .then(() => {
+            this.loading = false;
+            this.comment = "";
+            this.name = "";
+          });
+      }
+    },
+    addEmoji: function(code) {
+      this.emoji = this.emoji + code;
+    },
+    getStarId : function()
+    {
+      var starId;
         switch (this.zodiacSign) {
           case "Aquarius":
             starId = "Fyi9jXVQ4n4c1Pmja8dk";
@@ -190,21 +215,7 @@ export default {
             starId = "as8gKX5i3gThQxpu4iNq";
             break;
         }
-        var comment = {
-          StarId: starId,
-          Name: this.name,
-          Comment: this.comment + " " + this.emoji,
-          EntryTime: this.getEntryTime()
-        };
-        db.collection("Comments")
-          .add(comment)
-          .then(() => {
-            this.loading = false;
-          });
-      }
-    },
-    addEmoji: function(code) {
-      this.emoji = this.emoji + code;
+        return starId;
     },
     clearContent: function() {
       this.comment = "";
@@ -236,6 +247,8 @@ export default {
   },
   created: function() {
     this.fetchdata();
+    this.comment = "";
+    this.name = "";
   },
   computed: {
     // a computed getter
