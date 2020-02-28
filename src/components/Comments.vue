@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-dialog v-model="dialog" width="600">
+    <v-dialog v-model="dialog" width="600" >
       <template v-slot:activator="{ on }">
         <v-btn v-on="on" text color="grey">
           <v-icon>mdi-comment</v-icon>
         </v-btn>
       </template>
 
-      <v-card class="mx-auto">
+      <v-card class="mx-auto pa-0"  >
         <v-card-text>
           <template>
             <v-list three-line>
