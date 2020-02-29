@@ -13,6 +13,7 @@ import Marriage from '../views/Marriage.vue'
 import Relationship from '../views/Relationship.vue'
 import Money from '../views/Money.vue'
 import Land from '../views/Land.vue'
+import News from '../views/News.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -22,7 +23,8 @@ const routes = [
     component: Dashboard,
     props: true,
     meta: {
-      reload: true,}
+      reload: true,
+    }
   },
   {
     path: '/Health',
@@ -40,9 +42,9 @@ const routes = [
     component: Marriage
   },
   {
-    path : '/Career',
-    name : 'Career',
-    component : Career
+    path: '/Career',
+    name: 'Career',
+    component: Career
   },
   {
     path: '/Relationship',
@@ -55,14 +57,14 @@ const routes = [
     component: ZodiacSign
   },
   {
-    path : '/Money',
-    name : 'Money',
-    component : Money
+    path: '/Money',
+    name: 'Money',
+    component: Money
   },
   {
-    path : '/ForeignTravel',
-    name : 'ForeignTravel',
-    component : ForeignTravel
+    path: '/ForeignTravel',
+    name: 'ForeignTravel',
+    component: ForeignTravel
   },
   {
     path: '/Research',
@@ -96,6 +98,11 @@ const routes = [
     meta: {
       reload: true,
     }
+  },
+  {
+    path: '/News',
+    name: 'News',
+    component: News
   },
   {
     path: '/about',
