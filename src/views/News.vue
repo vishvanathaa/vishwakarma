@@ -24,23 +24,23 @@
             <v-row>
               <v-col>
                 <p
-                  class="font-weight-light"
+                  class="font-weight-light text-font" 
                 >WASHIGNTON : Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quia accusamus magni perferendis dolorem dicta, quibusdam ipsam dolorum provident architecto optio quaerat quasi reprehenderit ducimus tempore animi et laboriosam?</p>
                 <p
-                  class="font-weight-light"
+                  class="font-weight-light text-font"
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quia accusamus magni perferendis dolorem dicta, quibusdam ipsam dolorum provident architecto optio quaerat quasi reprehenderit ducimus tempore animi et laboriosam?</p>
               </v-col>
             </v-row>
           </v-col>
           <v-col cols="6" sm="4" md="6">
             <p
-              class="font-weight-light"
+              class="font-weight-light text-font"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quia accusamus magni perferendis dolorem dicta, quibusdam ipsam dolorum provident architecto optio quaerat quasi reprehenderit ducimus tempore animi et laboriosam?</p>
             <p
-              class="font-weight-light"
+              class="font-weight-light text-font"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quia accusamus magni perferendis dolorem dicta, quibusdam ipsam dolorum provident architecto optio quaerat quasi reprehenderit ducimus tempore animi et laboriosam?</p>
             <p
-              class="font-weight-light"
+              class="font-weight-light text-font"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quia accusamus magni perferendis dolorem dicta, quibusdam ipsam dolorum provident architecto optio quaerat quasi reprehenderit ducimus tempore animi et laboriosam?</p>
           </v-col>
         </v-row>
@@ -57,6 +57,12 @@ hr {
   height: 10px;
   background: gray;
   margin-bottom: 0px;
+}
+.text-font
+{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size:15px;
+  line-height:18px;
 }
 @media (min-width: 200px) {
   div.headlineText {
