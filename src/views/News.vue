@@ -17,7 +17,7 @@
             <v-row>
               <v-col class="text-center" color="black darken-1">
                 <div style="background-color:#E8ECEC">
-                  <v-icon size="120">mdi-account</v-icon>
+                  <v-img src="https://vishvanatha-acharya.herokuapp.com/vish.jpg"/>
                 </div>
               </v-col>
             </v-row>
