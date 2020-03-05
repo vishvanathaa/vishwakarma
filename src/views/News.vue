@@ -9,7 +9,7 @@
           <v-col>
             <div
               class="text-uppercase font-weight-black text-center subHeader mt-1"
-            >SERENA WILLIAMS BAGS GOLD MEDAL</div>
+            >ANIL BAGS GOLD MEDAL</div>
           </v-col>
         </v-row>
         <v-row>
@@ -17,7 +17,7 @@
             <v-row>
               <v-col class="text-center" color="black darken-1">
                 <div style="background-color:#E8ECEC">
-                  <v-img src="https://vishvanatha-acharya.herokuapp.com/vish.jpg"/>
+                  <v-img src="award.jfif" height="300"/>
                 </div>
               </v-col>
             </v-row>
