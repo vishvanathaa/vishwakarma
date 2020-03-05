@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto pa-0" outlined shaped color="grey lighten-4">
+  <v-card class="mx-auto pa-0 containerRotate" outlined color="grey lighten-4">
     <v-card-title class="mt-20">
       <div>
         <div class="text-uppercase font-weight-black text-center headlineText mt-5">THE DAIZY NEWS</div>
@@ -57,6 +57,15 @@ hr {
   height: 10px;
   background: gray;
   margin-bottom: 0px;
+}
+.containerRotate {
+    
+    border: solid 1px;
+    transform: rotateY(0deg) rotate(5deg); /* needs Y at 0 deg to behave properly*/
+    transition: transform 2s;
+}
+.containerRotate1:hover {
+    transform:  rotateY(180deg) rotate(45deg); /* notice the order */
 }
 .text-font
 {
