@@ -86,7 +86,7 @@ export default {
     };
   },
   methods: {
-    submit: function() {
+    submit() {
       if (this.$refs.form.validate()) {
         this.loading = true;
         var starId;
@@ -137,11 +137,14 @@ export default {
           .then(() => {
             this.loading = false;
             this.dialog = false;
-            console.log("Project added");
+            this.content = "";
             this.$emit("projectAdded");
           });
       }
     }
+  },
+  created() {
+    this.content = "";
   }
 };
 </script>
