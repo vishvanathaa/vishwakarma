@@ -1,28 +1,30 @@
 <template>
   <v-card class="mx-auto pa-0 containerRotate" color="grey lighten-4">
-    <v-card-title class="mt-20">
-      <div>
-        <div class="text-uppercase font-weight-black text-center headlineText mt-5">
-          THE INIDIAN EXIPRESS
-          <AddNews @projectAdded="snackbar = true" />
+    <v-card-title class="mt-20"   >
+      <div v-for="(item) in items" v-bind:key="item.name">
+        <div class="text-uppercase font-weight-black text-center headlineText mt-1">
+          THE INDIAN EXPRESS
+          <AddNews/>
         </div>
 
         <div
-          class="text-uppercase font-weight-regular text-center mt-5 font-sub-title"
-        >{{getEntryTime()}} <v-btn
+          class="text-uppercase font-weight-regular text-center mt-4   font-sub-title"
+        >{{getEntryTime()}}
+        
+         <v-btn 
               icon
               color="blue"
               href="https://facebook.com/sharer/sharer.php?u=https://vishvanatha-acharya.herokuapp.com"
               target="_blank"
             >
-              <v-icon>mdi-facebook</v-icon>
+             <v-icon>mdi-facebook</v-icon>
             </v-btn></div>
         <hr />
         <v-row>
           <v-col>
             <div
-              class="text-uppercase font-weight-black text-center subHeader mt-1"
-            >VISHVANATHA ACHARY BAGS GOLD MEDAL</div>
+              class="text-uppercase font-weight-black text-center subHeader"
+            > {{item.name}} BAGS GOLD MEDAL</div>
           </v-col>
         </v-row>
         <v-row class="mt-n3">
@@ -37,8 +39,8 @@
             <v-row>
               <v-col>
                 <p class="font-weight-light text-font">
-                  <span class="font-weight-bold">WASHIGNTON</span>
-                  : PV Sindhu, Rohit Sharma, Rani, Saurabh Chaudhary, Dutee Chand, Manu Bhaker, Bajrang Punia and Jaspal Rana are some of the prominent names that featured among the winners at the Times of India Sports Awards (TOISA) powered by BHIM-UPI, which honoured the best performances in Indian sport at a glittering awards function in Delhi on Thursday.
+                  <span class="font-weight-bold text-uppercase">{{item.place}}</span>
+                  : {{item.name}}, Rohit Sharma, Rani, Saurabh Chaudhary, Dutee Chand, Manu Bhaker, Bajrang Punia and Jaspal Rana are some of the prominent names that featured among the winners at the Times of India Sports Awards (TOISA) powered by BHIM-UPI, which honoured the best performances in Indian sport at a glittering awards function in Delhi on Thursday.
                 </p>
                 <p
                   class="font-weight-light text-font"
@@ -63,15 +65,15 @@
   </v-card>
 </template>
 <script>
+import db from "@/fb";
 import AddNews from "@/components/AddNews";
 export default {
   name: "news",
   components: { AddNews },
-  data() {
-    return {
-      snackbar: false
-    };
-  },
+  data : () => ( {
+      snackbar: false,
+      items: [],
+ }),
   methods: {
     getEntryTime: function() {
       var currentDate = new Date();
@@ -108,8 +110,32 @@ export default {
         ", " +
         currentDate.getFullYear();
       return currentDateWithFormat;
-    }
-  }
+    },
+    fetchdata() {
+      db.collection("news")
+        //.where("id", "==", "ghlML9lrwpujjCcBwKCw")
+        //.orderBy('EntryTime')
+        .onSnapshot(res => {
+          const changes = res.docChanges();
+          changes.forEach(change => {
+            if (change.type === "added") {
+               this.items.push({
+                 ...change.doc.data(),
+                 id: change.doc.id
+               });
+            }
+          });
+        })
+        
+        ;
+    },
+  },
+  created: function() {
+    this.fetchdata();
+  },
+  watch: {
+    "$route.path": "fetchdata"
+  },
 };
 </script>
 <style scoped>
@@ -122,11 +148,11 @@ hr {
   margin-bottom: 0px;
 }
 .font-sub-title {
-  font-size: 18px;
+  font-size: 25px;
 }
 .containerRotate {
   border: solid 1px;
-  transform: rotateY(0deg) rotate(1deg); /* needs Y at 0 deg to behave properly*/
+  transform: rotateY(0deg) rotate(0.5deg); /* needs Y at 0 deg to behave properly*/
   transition: transform 2s;
 }
 .containerRotate1:hover {
@@ -140,7 +166,7 @@ hr {
 }
 @media (min-width: 200px) {
   div.headlineText {
-    font-size: 28px;
+    font-size: 26px;
   }
   div.subHeader {
     font-size: 12px;
@@ -158,6 +184,9 @@ hr {
   div.headlineText {
     font-size: 80px;
   }
+  .font-sub-title {
+    font-size: 20px;
+  }
 }
 @media (min-width: 1000px) {
   div.headlineText {
@@ -171,6 +200,9 @@ hr {
     border: solid 1px;
     transform: rotateY(0deg) rotate(1deg); /* needs Y at 0 deg to behave properly*/
     transition: transform 2s;
+  }
+  .font-sub-title {
+    font-size: 20px;
   }
 }
 </style>

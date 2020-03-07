@@ -79,7 +79,8 @@ export default {
     return {
       drawer: false,
       links: [
-        { icon: "mdi-lifebuoy", text: "Dashboard", route: "/" },
+       
+        { icon: "mdi-lifebuoy", text: "Dashboard", route: "/Dashboard" },
         { icon: "mdi-ambulance", text: "Health", route: "/Health" },
         { icon: "mdi-steam-box", text: "Education", route: "/Education" },
         { icon: "mdi-desktop-classic", text: "Career", route: "/Career" },
@@ -98,7 +99,7 @@ export default {
           text: "Research and analysis",
           route: "/Research"
         },
-        { icon: "mdi-account", text: "News", route: "/News" }
+        { icon: "mdi-account", text: "News", route: "/" }
       ],
       menus: [
         { name: "Aries", role: "Web developer", avatar: "&#9800;" },

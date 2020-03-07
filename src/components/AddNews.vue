@@ -16,19 +16,19 @@
             <v-row>
               <v-col cols="12">
                 <v-text-field
-                  v-model="star"
-                  :items="items"
+                  v-model="name"
                   prepend-icon="mdi-star"
                   outlined
                   label="Name"
                   shaped
+                   :rules="inputRules"
                 ></v-text-field>
               </v-col>
             </v-row>
-            <v-row class="mt-n9 mb-n9">
+            <v-row class="mt-n2 mb-n6">
               <v-col cols="12">
                 <v-text-field
-                  label="Place"
+                  label="place"
                   prepend-icon="mdi-nintendo-switch"
                   v-model="place"
                   :rules="inputRules"
@@ -55,9 +55,8 @@ export default {
   data() {
     return {
       dialog: false,
-      star:'',
+      name:'',
       place: "",
-      clearable: true,
       inputRules: [
         v => !!v || "This field is required",
         v =>
@@ -67,18 +66,19 @@ export default {
       loading: false
     };
   },
+  
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
         this.loading = true;
-        db.collection("stars")
-          .doc("12")
-          .update({ content: this.content })
+        db.collection("news")
+          .doc("ghlML9lrwpujjCcBwKCw")
+          .update({ name: this.name,place : this.place })
           .then(() => {
             this.loading = false;
             this.dialog = false;
             this.content = "";
-            this.$emit("projectAdded");
+            this.$router.push("/ConfirmAddNews");
           });
       }
     }

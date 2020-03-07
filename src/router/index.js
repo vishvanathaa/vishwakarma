@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import ConfirmationAdd from '../views/ConfirmationAdd.vue'
+import ConfirmAddNews from '../views/ConfirmAddNews.vue'
 import Health from '../views/Health.vue'
 import Education from '../views/Education.vue'
 import ZodiacSign from '../views/ZodiacSign.vue'
@@ -18,7 +19,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/Dashboard',
     name: 'Dashboard',
     component: Dashboard,
     props: true,
@@ -91,6 +92,11 @@ const routes = [
     }
   },
   {
+    path: '/ConfirmAddNews',
+    name: 'ConfirmAddNews',
+    component: ConfirmAddNews
+  },
+  {
     path: '/Dashboard/:id',
     name: 'DashboardRefresh',
     component: Dashboard,
@@ -100,7 +106,7 @@ const routes = [
     }
   },
   {
-    path: '/News',
+    path: '/',
     name: 'News',
     component: News
   },

@@ -78,9 +78,6 @@ export default {
   created() {
     this.fetchdata();
   },
-  watch: {
-    "$route.path": "fetchdata"
-  },
   methods: {
     fetchdata() {
       db.collection("stars").onSnapshot(res => {
