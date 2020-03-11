@@ -80,12 +80,12 @@ export default {
       drawer: false,
       links: [
        
-        { icon: "mdi-lifebuoy", text: "Dashboard", route: "/Dashboard" },
+        { icon: "mdi-apps", text: "Dashboard", route: "/Dashboard" },
         { icon: "mdi-ambulance", text: "Health", route: "/Health" },
-        { icon: "mdi-steam-box", text: "Education", route: "/Education" },
+        { icon: "mdi-lifebuoy", text: "Education", route: "/Education" },
         { icon: "mdi-desktop-classic", text: "Career", route: "/Career" },
-        { icon: "mdi-xbox", text: "Foreign Travel", route: "/ForeignTravel" },
-        { icon: "mdi-playstation", text: "Visa", route: "/Visa" },
+        { icon: "mdi-airplane", text: "Foreign Travel", route: "/ForeignTravel" },
+        { icon: "mdi-airplane-off", text: "Visa", route: "/Visa" },
         { icon: "mdi-human-male-female", text: "Marriage", route: "/Marriage" },
         {
           icon: "mdi-heart",
