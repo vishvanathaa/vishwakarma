@@ -80,7 +80,7 @@ export default {
       drawer: false,
       links: [
        
-        { icon: "mdi-apps", text: "Dashboard", route: "/Dashboard" },
+        { icon: "mdi-apps", text: "Dashboard", route: "/" },
         { icon: "mdi-ambulance", text: "Health", route: "/Health" },
         { icon: "mdi-lifebuoy", text: "Education", route: "/Education" },
         { icon: "mdi-desktop-classic", text: "Career", route: "/Career" },
@@ -99,7 +99,7 @@ export default {
           text: "Research and analysis",
           route: "/Research"
         },
-        { icon: "mdi-account", text: "News", route: "/" }
+        { icon: "mdi-account", text: "News", route: "/News" }
       ],
       menus: [
         { name: "Aries", role: "Web developer", avatar: "&#9800;" },

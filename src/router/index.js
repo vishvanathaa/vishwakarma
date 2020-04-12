@@ -22,10 +22,7 @@ const routes = [
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-    props: true,
-    meta: {
-      reload: true,
-    }
+    props: true
   },
   {
     path: '/Health',
