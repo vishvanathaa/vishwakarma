@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvishwakarma"]=self["webpackChunkvishwakarma"]||[]).push([[443],{6444:function(a,s,t){t.r(s),t.d(s,{default:function(){return c}});var u=function(){var a=this;a._self._c;return a._m(0)},n=[function(){var a=this,s=a._self._c;return s("div",{staticClass:"about"},[s("h1",[a._v("This is an about page check git push 21")])])}],e=t(1001),i={},r=(0,e.Z)(i,u,n,!1,null,null,null),c=r.exports}}]);
+//# sourceMappingURL=about.bc6df113.js.map

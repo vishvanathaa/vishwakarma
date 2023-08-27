@@ -20,6 +20,18 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'News',
+    component: News,
+    props: true
+  },
+  {
+    path: '/ispent',
+    name: 'ispent',
+    component: News,
+    props: true
+  },
+  {
+    path: '/Dashboard',
     name: 'Dashboard',
     component: Dashboard,
     props: true
@@ -102,11 +114,7 @@ const routes = [
       reload: true,
     }
   },
-  {
-    path: '/News',
-    name: 'News',
-    component: News
-  },
+  
   {
     path: '/about',
     name: 'About',

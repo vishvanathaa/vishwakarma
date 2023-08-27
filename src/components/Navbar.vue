@@ -3,19 +3,16 @@
   <div>
     <v-snackbar v-model="snackbar" :timeout="5000" top color="success">
       <span>Awesome! You added a new prediction.</span>
-      <v-btn
-        color="white"
-        text
-        @click="snackbar = false"
-        router
-        :to="{ path: '/ConfirmationAdd', name: 'ConfirmationAdd'}"
-      >Close</v-btn>
+      <v-btn color="white" text @click="snackbar = false" router
+        :to="{ path: '/ConfirmationAdd', name: 'ConfirmationAdd' }">Close</v-btn>
     </v-snackbar>
     <v-app-bar color="primary accent-4" dense dark app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>
-        <v-icon class="mr-1 mb-1">mdi-hinduism</v-icon>
-        <span class="font-weight-light">Astro</span>
+      <v-toolbar-title class="pa-0">
+        <v-icon class="mr-1 mb-1">mdi-wallet</v-icon>
+        <span class="font-weight-bold">iSpent</span>
+        <span class="font-weight-light"> - Expense and Income Tracker</span>
+        <span class="font-weight-light ml-1">: Astro </span>
         <span>Science</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -30,11 +27,7 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item
-            v-for="menu in menus"
-            :key="menu.name"
-            :to="{ name: 'ZodiacSign', params: { id: menu.name } }"
-          >
+          <v-list-item v-for="menu in menus" :key="menu.name" :to="{ name: 'ZodiacSign', params: { id: menu.name } }">
             <v-list-item-icon v-html="menu.avatar"></v-list-item-icon>
             <v-list-item-content class="ml-n4">{{ menu.name }}</v-list-item-content>
           </v-list-item>
@@ -79,8 +72,8 @@ export default {
     return {
       drawer: false,
       links: [
-       
-        { icon: "mdi-apps", text: "Dashboard", route: "/" },
+        { icon: "mdi-wallet", text: "iSpent", route: "/" },
+        { icon: "mdi-apps", text: "Astrology", route: "/Dashboard" },
         { icon: "mdi-ambulance", text: "Health", route: "/Health" },
         { icon: "mdi-lifebuoy", text: "Education", route: "/Education" },
         { icon: "mdi-desktop-classic", text: "Career", route: "/Career" },
@@ -99,7 +92,8 @@ export default {
           text: "Research and analysis",
           route: "/Research"
         },
-        { icon: "mdi-account", text: "News", route: "/News" }
+
+       
       ],
       menus: [
         { name: "Aries", role: "Web developer", avatar: "&#9800;" },
