@@ -3,7 +3,7 @@
     
     <Navbar/>
     
-    <v-content>
+    <v-main>
       <v-container >
         <router-view></router-view>
          
@@ -12,7 +12,7 @@
     <v-spacer></v-spacer>
     <div>&copy; {{ new Date().getFullYear() }} iSpent. Vishvanatha Achary</div>
   </v-footer>
-    </v-content>
+    </v-main>
     
   </v-app>
 </template>

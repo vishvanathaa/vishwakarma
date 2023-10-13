@@ -8,6 +8,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', (_req, res) => {
+  res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=None");
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 

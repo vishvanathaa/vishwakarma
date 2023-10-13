@@ -6,8 +6,7 @@
           <div class="text-uppercase font-weight-black text-center headlineText mt-1 pa-0">
             THE WEB EXPRESS<br>
             <span class="text-uppercase font-weight-regular text-center font-sub-title">{{ getEntryTime() }}
-              <v-btn icon color="blue"
-                href="https://facebook.com/sharer/sharer.php?u=https://vishvanatha-acharya.herokuapp.com" target="_blank">
+              <v-btn icon color="blue" href="https://facebook.com/sharer/sharer.php?u=https://ispent.in" target="_blank">
                 <v-icon>mdi-facebook</v-icon>
               </v-btn>
               <v-icon color="green" alt="Certified" title="Approved">mdi-checkbox-marked-circle</v-icon>
@@ -47,7 +46,6 @@
                 rated as
                 the best mobile
                 app for personal finance
-
               </h1>
             </v-col>
           </v-row>
@@ -99,12 +97,10 @@
                   <p class="font-weight-light text-font"><b class="font-weight-bold">Reducing Stress:</b> Financial
                     uncertainty can be a significant source of stress. Budgeting and expense tracking provide a sense of
                     control and confidence, reducing stress related to money matters.</p>
-
                 </v-col>
               </v-row>
             </v-col>
             <v-col>
-
               <p class="font-weight-light text-font">iSpent, An expenses and income tracker mobile app typically offers a
                 range of
                 features to help users manage their financial transactions and monitor their financial health. The data is
@@ -160,7 +156,16 @@
                 effective
                 budgeting and expense tracking, you're more likely to become financially independent and self-reliant over
                 time.</p>
-
+            </v-col>
+          </v-row>
+          <v-row class="mt-n3">
+            <v-col>
+              <h3 class="font-weight-light text-font mt-n5">
+                    In summary, tracking expenses, income, and budgeting using iSpent are essential tools for achieving financial
+                    security, managing your money effectively, and making informed financial decisions. Whether you're an
+                    individual, a household, or a business, these practices provide a roadmap to navigate your financial
+                    journey successfully.
+              </h3>
             </v-col>
           </v-row>
           <v-row>
@@ -171,9 +176,10 @@
               <v-list-item-title class="text-uppercase font-weight-regular text-caption">Vishvanatha Achary
               </v-list-item-title>
               <div class="font-weight-bold font-feedback">
-                "I am the Chief Architect of iSpent and am available for all technical support. A well-known framework has
-                been used to develop this app. This app is highly secure and lightweight. My contact details are available
-                on the Google Play Store, and you are free to contact me at any time."
+                "I am grateful for the chance to review the code crafted by highly skilled technical professionals, even
+                amid my hectic schedule. This app has been developed using a renowned framework. Our technical team is
+                always at your disposal to resolve any technical issues. Thanks to the team for your tremendous effort,
+                and I wish you all the best in your endeavors."
               </div>
             </v-col>
             <v-col>
@@ -340,18 +346,9 @@
 
                 </v-card-actions>
               </v-card>
-
-
             </v-col>
           </v-row>
-          <v-row class="mt-50">
-            <v-col>
-              <div class="mt-20">
-                <v-btn color="blue darken-4" dark>
-                  <v-icon dark>mdi-gift </v-icon>&nbsp;DONATE</v-btn>
-              </div>
-            </v-col>
-          </v-row>
+
         </div>
       </v-card-text>
       <v-card-actions>
@@ -361,7 +358,7 @@
   </div>
 </template>
 <script>
-import db from "@/fb";
+//import db from "@/fb";
 //import AddNews from "@/components/AddNews";
 export default {
   name: "news",
@@ -407,7 +404,7 @@ export default {
         currentDate.getFullYear();
       return currentDateWithFormat;
     },
-    fetchdata() {
+    /*fetchdata() {
       db.collection("news")
         //.where("id", "==", "ghlML9lrwpujjCcBwKCw")
         //.orderBy('EntryTime')
@@ -424,7 +421,7 @@ export default {
         })
 
         ;
-    },
+    },*/
   },
   /*created: function () {
     this.fetchdata();
@@ -505,7 +502,7 @@ hr {
 
 @media (min-width: 200px) {
   div.headlineText {
-    font-size: 34px;
+    font-size: 16px;
     text-align: center;
     font-family: 'Times New Roman';
   }
@@ -529,7 +526,7 @@ hr {
 
 @media (min-width: 800px) {
   div.headlineText {
-    font-size: 76px;
+    font-size: 70px;
     text-align: center;
     font-family: 'Times New Roman';
   }
@@ -547,7 +544,7 @@ hr {
 
 @media (min-width: 1000px) {
   div.headlineText {
-    font-size: 85px;
+    font-size: 78px;
     text-align: center;
     font-family: 'Times New Roman';
   }
@@ -568,5 +565,4 @@ hr {
   .font-sub-title {
     font-size: 20px;
   }
-}
-</style>
+}</style>

@@ -1,18 +1,23 @@
 <template>
-   
-  
-       
-            <GChart
+  <div>
+  <h4 class="font-weight-light text-font mb-5">
+                    <span class="font-weight-bold">iSpent: </span>
+                    An expenses and income tracker mobile app typically offers a range of
+                    features to
+                    help
+                    users manage their financial transactions and monitor their financial health. Tracking expenses and
+                    budgeting income provide a clear understanding of where your money is coming from and where it's
+                    going.
+                    This awareness is crucial for making informed financial decisions and avoiding overspending.
+                  </h4>
+    <GChart
                 :settings="{packages: ['bar']}"    
                 :data="chartData"
                 :options="chartOptions"
                 :createChart="(el, google) => new google.charts.Bar(el)"
                 @ready="onChartReady"
             />
-        
-  
-        
-    
+          </div>
 </template>
 <script>
 import { GChart } from 'vue-google-charts'
@@ -38,7 +43,7 @@ export default {
       if (!this.chartsLib) return null
       return this.chartsLib.charts.Bar.convertOptions({
         chart: {
-          title: 'Financial Growth',
+          title: 'FINANCIAL GROWTH',
           subtitle: 'Finance position of different star as per research'
         },
         bars: 'horizontal', // Required for Material Bar Charts.

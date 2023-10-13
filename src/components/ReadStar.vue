@@ -46,8 +46,6 @@
         dialog: false,
       }
     },
-    created : function(){
-        console.log(this.StarId + " vishva");
-    }
+    
    }   
 </script>

@@ -34,7 +34,7 @@
               <v-btn
                 icon
                 color="blue"
-                href="https://facebook.com/sharer/sharer.php?u=https://vishvanatha-acharya.herokuapp.com"
+                href="https://facebook.com/sharer/sharer.php?u=https://ispent.in"
                 target="_blank"
               >
                 <v-icon>mdi-facebook</v-icon>
