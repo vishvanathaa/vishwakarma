@@ -4,7 +4,7 @@
       <v-card-title class="mt-30 justify-center pt-5 pb-0">
         <div>
           <div class="text-uppercase font-weight-black text-center headlineText mt-1 pa-0">
-            THE WEB EXPRESS<br>
+            THE ISPENT EXPRESS<br>
             <span class="text-uppercase font-weight-regular text-center font-sub-title">{{ getEntryTime() }}
               <v-btn icon color="blue" href="https://facebook.com/sharer/sharer.php?u=https://ispent.in" target="_blank">
                 <v-icon>mdi-facebook</v-icon>
