@@ -4,7 +4,7 @@
       <v-card-title class="mt-30 justify-center pt-5 pb-0">
         <div>
           <div class="text-uppercase font-weight-black text-center headlineText mt-1 pa-0">
-            THE ISPENT EXPRESS<br>
+            THE WEB EXPRESS<br>
             <span class="text-uppercase font-weight-regular text-center font-sub-title">{{ getEntryTime() }}
               <v-btn icon color="blue" href="https://facebook.com/sharer/sharer.php?u=https://ispent.in" target="_blank">
                 <v-icon>mdi-facebook</v-icon>
@@ -171,8 +171,14 @@
           <v-row>
             <v-col>
               <v-list-item-content>
-                <iframe width="460" height="315" src="https://www.youtube.com/embed/_HcnL3wRhdM?si=7P-JR7wF8MNuYvgP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="360" height="315" src="https://www.youtube.com/embed/_HcnL3wRhdM?si=7P-JR7wF8MNuYvgP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </v-list-item-content>
+            </v-col>
+            <v-col>
+              <v-list-item-content>
+                <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/20750611-cf1a-411b-a5cd-952ed31f40f4" loading="lazy" title="Synthesia video player - Your AI video" allow="encrypted-media; fullscreen;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+            </v-list-item-content> 
+
             </v-col>
           </v-row>
           <v-row>
@@ -509,7 +515,7 @@ hr {
 
 @media (min-width: 200px) {
   div.headlineText {
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
     font-family: 'Times New Roman';
   }
