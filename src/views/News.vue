@@ -5,7 +5,7 @@
         <div>
         <v-row class="mt-1">
           <v-col class="font-weight-black text-center headlineText mt-1 pa-0">
-            <span>iSpent&#8482;</span> EXPENSE TRACKER
+            ISPENT EXPENSE TRACKER
           </v-col>
         </v-row>
         <v-row>
